@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+#define ALPHABET 10
+
+int main() {	
+	
+	char* alphabet = (char*)malloc(10);
+	alphabet = "abcdefghij" ;
+	FILE* fp;
+	fp = fopen("test.txt","w+");
+	
+	int i = 0;
+	int k ;
+	
+	for (i = 0 ; i < 64000 ; i++){	
+	    k = rand()%9 ;
+		fprintf(fp,"%c",alphabet[i]);		 
+	} 
+	
+	return 0;
+}
